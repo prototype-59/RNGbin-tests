@@ -33,7 +33,5 @@ def matrix_visualization(rnd_seq):
 # generate a sequence of n random bits
 n = 1000
 random_seq = f'{random.getrandbits(n):=0{n}b}'
-
-# test
 matrix_visualization(random_seq)
 

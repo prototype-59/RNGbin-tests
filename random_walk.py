@@ -42,7 +42,5 @@ def random_walk(rnd_seq):
 # generate a sequence of n random bits
 n = 1000
 random_seq = f'{random.getrandbits(n):=0{n}b}'
-
-# test
 random_walk(random_seq)
 
