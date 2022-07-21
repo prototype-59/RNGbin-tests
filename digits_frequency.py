@@ -29,7 +29,6 @@ def digits_frequency(rnd_seq):
     # plot
     digitsfrequency = [rf_0,rf_1]
     digits = ["0", "1"]
-
     plt.xlabel("digits")
     plt.ylabel("frequency")
     plt.title("relative frequency of digits")

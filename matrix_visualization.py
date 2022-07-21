@@ -22,6 +22,8 @@ def matrix_visualization(rnd_seq):
     shape = ( size, size )
     mat  = x.reshape( shape )
     X,Y = np.meshgrid(np.arange(mat.shape[1]), np.arange(mat.shape[0]))
+
+    # plot
     plt.scatter(X.flatten(), Y.flatten(), c=mat.flatten())
     plt.title("matrix visualisation")
     plt.show()

@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 
 # random walk test
 # A random walk is the random walk on the integer number line
-# which starts at 0, and at each step moves -1 for bit 0 or +1 for bit 1
-# For a random sequence of bits, random walk should end at 0
+# which starts at 0, and at each step moves -1 for bit 0 or +1 for bit 1.
+# For a random sequence, the random walk should be near zero.
 # https://en.wikipedia.org/wiki/Random_walk
 #--------------------------------------------
 def random_walk(rnd_seq):
@@ -28,6 +28,8 @@ def random_walk(rnd_seq):
             step = 1       
         
         positions.append(positions[i] + step)
+    
+    # plot
     plt.plot(positions)
     plt.xlabel('distance')
     plt.ylabel('walk')
