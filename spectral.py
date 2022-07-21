@@ -75,7 +75,8 @@ def spectral(rnd_seq, plot = True):
 # TEST
 #------------------------------------------------
 # generate a sequence of n random bits
-n = 100
+n = 1000
 random_seq = f'{random.getrandbits(n):=0{n}b}'
 pval = spectral(random_seq)
 print(pval)
+

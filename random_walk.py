@@ -38,6 +38,8 @@ def random_walk(rnd_seq):
     plt.show()
     return
 
+def su(x, y): return x + y
+
 # TEST
 #------------------------------------------------
 # generate a sequence of n random bits
