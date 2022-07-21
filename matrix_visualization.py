@@ -10,7 +10,7 @@ import random
 import numpy as np
 import matplotlib.pyplot as plt
 
-# visualize random string as a matrix
+# visualize a random string as a matrix
 #--------------------------------------------
 def matrix_visualization(rnd_seq):
 
