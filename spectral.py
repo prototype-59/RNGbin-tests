@@ -17,10 +17,13 @@ import scipy.special as spc
 import scipy.fftpack as sff
 
 # spectral test (for sequence length > 1000)
-# The purpose of this test is to detect periodic features (i.e., repetitive patterns that are near each other)
-# in the tested sequence that would indicate a deviation from the assumption of randomness. The intention is to detect
-# whether the number of peaks exceeding the 95 % threshold is significantly different than 5 %
-#--------------------------------------------
+# The purpose of this test is to detect periodic features 
+# (i.e., repetitive patterns that are near each other)
+# in the tested sequence that would indicate a deviation 
+# from the assumption of randomness. The intention is 
+# to detect whether the number of peaks exceeding the 95% 
+# threshold is significantly different than 5%
+#------------------------------------------------
 def spectral(rnd_seq, plot = True):
     n = len(rnd_seq)
 
@@ -29,17 +32,19 @@ def spectral(rnd_seq, plot = True):
     for digit in rnd_seq:
         up_down.append(2 * int(digit) - 1)
     
-    # apply a Discrete Fourier transform (DFT)
+    # apply a Discrete Fourier Transform (DFT)
     spectral = sff.fft(up_down)
 
     # modulus gives a sequence of peak heights.
     slice = int(n/2)  #floor(length_of_binary_data / 2)
     modulus = abs(spectral[0:slice])
 
-    # under an assumption of randomness, 95 % of the values obtained from the test should not exceed the 95 % peak height.
+    # under an assumption of randomness, 95%
+    # of the values obtained from the test 
+    # should not exceed the 95 % peak height.
     tau = np.sqrt(np.log(1 / 0.05) * n)
 
-    # n0 is the expected theoretical (95 %) number of peaks
+    # n0 is the expected theoretical (95%) number of peaks
     n0 = 0.95 * (n / 2) 
 
     # n1 = observed number of peaks that are less than 5%.
@@ -67,12 +72,8 @@ def spectral(rnd_seq, plot = True):
     
     return pval
 
-    
-
-
 # TEST
 #------------------------------------------------
-
 # generate a sequence of n random bits
 n = 100
 random_seq = f'{random.getrandbits(n):=0{n}b}'

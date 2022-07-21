@@ -42,9 +42,7 @@ def digits_frequency(rnd_seq):
 
 # TEST
 #------------------------------------------------
-
 # generate a sequence of n random bits
 n = 1000
 random_seq = f'{random.getrandbits(n):=0{n}b}'
 digits_frequency(random_seq)
-
