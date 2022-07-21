@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 # visualize random string as a matrix
 #--------------------------------------------
-def rngbin_matrixvisualization(rnd_seq):
+def matrix_visualization(rnd_seq):
 
     # reduce to a square matrix
     size = int(math.sqrt(len(rnd_seq)))
@@ -35,5 +35,5 @@ n = 1000
 random_seq = f'{random.getrandbits(n):=0{n}b}'
 
 # test
-rngbin_matrixvisualization(random_seq)
+matrix_visualization(random_seq)
 
