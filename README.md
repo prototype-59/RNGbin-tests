@@ -1,1 +1,1 @@
-# RNGbin-tests
+## Binary Random Number Generator Tests (RNGbin-tests)
